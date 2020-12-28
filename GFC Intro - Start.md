@@ -18,13 +18,19 @@ Please allow us to give you a brief introduction.
 # Outline
 ### Start to GFC
 
-**1. GFC Intro - Cherish your Trust**\
-**2. What does GFC mean？**\
-**3. What is GFC？**\
-**4. Key System(Star Trek) - Strangers: Behavior-Trust-Model (BTM)**\
-**5. Products - GFC DeFi: Liquidity & Star Trek 2077  & Trust Lending & Insurance**\
-**6. GFC Roadmap**\
-**7. FAQs**
+**1. 📜 GFC Intro - Cherish your Trust**
+
+**2. 🆓 What does GFC mean？**
+
+**3. 🖇 What is GFC？**
+
+**4. 🪙 Key System(Star Trek) - Strangers: Behavior-Trust-Model (BTM)**
+
+**5. 🎁 Products - GFC DeFi: Liquidity & Star Trek 2077  & Trust Lending & Insurance**
+
+**6. 📝 GFC Roadmap**
+
+**7. 👌🏻 FAQs**
 
 
 
