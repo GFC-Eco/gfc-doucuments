@@ -1,2 +1,0 @@
-# doucuments
-Galaxy.Finance Introduction
