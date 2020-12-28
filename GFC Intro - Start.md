@@ -39,7 +39,7 @@ And we trust in the two principles:
 
 Let's imagine.
 
-Suppose we are on Noah's ark, heading for the stars. Every planet (except the stars) is "silent".
+Suppose we are on Noah's ark, heading for the stars. Every planet (except the stars) is silent.
 
 To us, each planet is unfamiliar.
 
@@ -47,21 +47,21 @@ People are wary of unfamiliar things and feel insecure. This feeling of insecuri
 
 In the Age of Sail, how cruel and hostile were the policies of the explorers' countries toward the natives of the New World, in some corners of the Earth, and even more so when traveling in the universe.
 
-Want to trust a stranger, or a group of strangers, is an "incredible" thing.
+Want to trust a stranger, or a group of strangers, is an incredible thing.
 
-However, with the support of modern technology and related theories, we can somehow achieve "stranger trust" - this is actually a very important technological innovation and breakthrough.
+However, with the support of modern technology and related theories, we can somehow achieve stranger trust - this is actually a very important technological innovation and breakthrough.
 
 Of course, the establishment of stranger trust requires not only consensus and rules, but also the common force to maintain the rules.
 
-For example, if more than 51% of BTC participants chose to "defect", the whole history would be rewritten. 
+For example, if more than 51% of BTC participants chose to defect, the whole history would be rewritten. 
 
 To prevent that, Satoshi has devised a series of subtle tricks to defuse or transfer these risks.
 
 Here is an interesting question: How is it that the simple rules devised by Satoshi have such great power of influence? Why do most people follow the rules of the game that were developed a decade ago? Are so many people around the world altruistic?
 
-The essence is not that Satoshi is God, but that he has cleverly used some "forces of nature". 
+The essence is not that Satoshi is God, but that he has cleverly used some forces of nature. 
 
-This force is the power of truth in economics, behavior science, sociology, psychology and many other disciplines. Through a series of clever designs, to drive the "selfish people", spontaneous implementation of the rules, so as to achieve the stability and development of the entire network.
+This force is the power of truth in economics, behavior science, sociology, psychology and many other disciplines. Through a series of clever designs, to drive the selfish people, spontaneous implementation of the rules, so as to achieve the stability and development of the entire network.
 
 This is really a genius design.
 
@@ -73,7 +73,7 @@ GFC-Defi is an interesting experiment.
 
 I would like to briefly describe the value and significance of GFC.
 
-The core value of GFC lies in the exploration and application of the solution of "stranger trust mechanism", which is to solve the problem of trust among distrustful subjects. 
+The core value of GFC lies in the exploration and application of the solution of stranger-trust-mechanism, which is to solve the problem of trust among distrustful subjects. 
 
 GFC builds an evolving ecosystem of stranger relationships through blockchain technology and economics applications.
 
@@ -96,7 +96,7 @@ Even for individuals within the same group, mutual trust is very fragile. Much l
 What is the law in human society? It's worth thinking about 🤔.
 
 
-With the development and evolution of living things, primates with stronger thinking ability and the spirit of all things - human beings - were gradually formed. 
+With the development and evolution of living things, primates with stronger thinking ability and the spirit of all things, human beings, were gradually formed. 
 Due to the emergence of language and writing, the communication of ideas was facilitated. 
 
 As tools were created and continuously developed, the awareness and result of collaborative division of labor to win together emerged. It was only after long years of learning. The word, trust, took on its true meaning.
@@ -120,7 +120,7 @@ In other words, how to form trust between strangers?
 This is the key issue that GFC focuses on, and where the value of GFC lies.
 
 
-We have always considered the emergence of Bitcoin to be an irreversible and groundbreaking convergence of innovative technologies. Satoshi has implemented the "trust mechanism without trust" through ingenious design.
+We have always considered the emergence of Bitcoin to be an irreversible and groundbreaking convergence of innovative technologies. Satoshi has implemented the 'trust mechanism without trust' through ingenious design.
 
 Imagine how many BTC holders around the world are familiar with each other and know each other? How many people bought BTC because they were introduced by their friends? 
 
