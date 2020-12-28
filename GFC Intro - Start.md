@@ -33,9 +33,9 @@ Galaxy.Finance（GFC）is a **DeFi ecosystem by using Behavior (of strangers) - 
 GFC is based on the theoretical system of human behavior, economics and game theory.
 And we trust in the two principles:
 
-**1. The Code is the law.**
+   **1. The Code is the law.**
 
-**2. The behavior is the trust.**
+   **2. The behavior is the trust.**
 
 Let's imagine.
 
