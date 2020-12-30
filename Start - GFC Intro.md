@@ -32,7 +32,7 @@ Please allow us to give you a brief introduction.
 
 **7. 👌🏻 FAQs**
 
-
+This following part will introduce the two questions.
 
 # ONE: GFC Intro - Cherish your Trust
 Galaxy.Finance（GFC）is a **DeFi ecosystem by using Behavior (of strangers) - Trust - Model and blockchain technology**.
