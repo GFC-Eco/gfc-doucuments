@@ -32,6 +32,7 @@ Please allow us to give you a brief introduction.
 
 **7. 👌🏻 FAQs**
 
+![](https://github.com/GFC-Eco/gfc-doucuments/blob/main/Photos/Dashboard01.png?raw=true)
 This following part will introduce the two questions.
 
 # ONE: GFC Intro - Cherish your Trust
