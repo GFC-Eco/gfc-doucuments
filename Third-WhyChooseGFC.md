@@ -83,6 +83,10 @@ In the GFC business model, the specific revenue sources include the following (R
 * Star Trek 2077 system fees  
 * System dust (unassigned interest or fees)
 
+
+![](https://github.com/GFC-Eco/gfc-doucuments/blob/main/Photos/Liquidity01.png?raw=true)
+
+
 # 💫Star Trek 2077
 If GFC represents our aspiration to the universe and the future, Star Trek 2077 is the aircraft carrier that carries all users, and we will give users a certain contribution value for every contribution they make in the ecology. 
 
@@ -93,6 +97,8 @@ For the entire ecosystem, Star Trek2077 will become our user center and behavior
 We encourage users to use GFC eco-products to a high degree or to actively build communities. Further, we will define these behaviors as the user profile of the user within the ecosystem - we trust your behavior more than any asset proof. 
 
 Both our upcoming T.lending and subsequent products will be built on Star Trek2077 as the foundation for efficient demand processing.
+
+![Star Trek 2077](https://github.com/GFC-Eco/gfc-doucuments/blob/main/Photos/Star%20Trek%202077.png?raw=true)
 
 Star Trek 2077 will consist of the following systems.
 
@@ -162,6 +168,9 @@ And you can choose to give it back to the eco community after one year. Eco will
 The buyback price will be 1BTC higher for each Ultimate Achievement medal held for one more year.
 
 # 📜 Trust Lending
+
+![](https://github.com/GFC-Eco/gfc-doucuments/blob/main/Photos/T.Lending.png?raw=true)
+
 The essence of finance is credit, and since the Bitcoin era, countless blockchain projects have built a vast array of applications based on trust systems and code. 
 
 However, Defi, which refers directly to financial services, didn’t receive a lot of attention until 2020. 
@@ -212,3 +221,6 @@ Depending on the demand and supply of different currencies in the pool, we will 
 The funds you invest in T.lending will be diversified to provide many loan orders. 
 
 These orders will cover from small to large amounts, from ecological junior crew to senior crew, from short to long term, providing investors with a balanced diversification service.
+
+# GFC Insurance
+Insurance is coming soon.
