@@ -160,3 +160,55 @@ Along with the medal, more eco rewards will be awarded within the community.
 And you can choose to give it back to the eco community after one year. Eco will buy back each Ultimate Achievement Medal for 5BTC. 
 
 The buyback price will be 1BTC higher for each Ultimate Achievement medal held for one more year.
+
+# 📜 Trust Lending
+The essence of finance is credit, and since the Bitcoin era, countless blockchain projects have built a vast array of applications based on trust systems and code. 
+
+However, Defi, which refers directly to financial services, didn’t receive a lot of attention until 2020. 
+
+More unfortunately, what we see in the many existing Defi applications is still traditional thinking-trust in collateral. 
+
+T.Lending will provide our users with unsecured credit lending services. 
+
+T.Lending has two core features.
+
+## **Behavior is your trust.** 
+Compared with other lending platforms’ front-loaded credit evaluation system or collateral system, T.Lending adopts a non-perceptive behavior-credit building model - Star Trek2077. 
+
+We will record and analyze every user’s behavior in the ecology, including social behavior and transaction behavior.
+
+This is then used to build a behavioral credit profile of each user. 
+
+In short, for a user, once he enters the core ecosystem of GFC, he will receive a direct line of credit on T.Lending.
+
+## **No transaction fees.**
+In addition to serving users within the GFC ecosystem, T.lending can also provide investment services to non-members of the ecosystem. 
+
+For investors of T.Lending, the platform does not charge any transaction fees or management fees. 
+
+Based on the supply and demand of funds in the system, the system will give an immediate interest rate term structure. 
+
+Investors’ capital will be divided into multiple loan accounts, providing users with a diversified investment service.
+
+## Further explanation.
+**First. If you have used our T.lending service, you can understand “no perception” very intuitively.**
+
+Whether it is P2P service in Internet finance or lending service in other blockchain projects, all of them require more or less active information or collateral from users to meet the requirements of credit assessment. 
+
+In the GFC worldview, a user’s actions in the GFC ecosystem are his credit, such as purchasing GFCs, actively participating in community operations, pledging LP-token, etc. 
+
+For example, when a user is very active in ecological construction (actively posting original project tweets, recommending projects to friends) and shows enthusiasm and belief in the ecology, we believe that the credibility of such a portrait credit is comparable to that of collateral.
+
+**Second. The borrowing amount of T.lending has a strong correlation with multiple factors:**
+
+the number of GFCs purchased and held, the intensity of pledging behavior, project activity participation, community activity, personal activity, etc.
+
+**Thrid. As you can see, investors in T.lending need to choose the investment period of the asset, currently we set the period to 15d, 30d, 60d, 180d.**
+
+Depending on the demand and supply of different currencies in the pool, we will give the corresponding interest rate term structure through smart contracts.
+
+**Fourth. T.lending gives investors a diversification service.**
+
+The funds you invest in T.lending will be diversified to provide many loan orders. 
+
+These orders will cover from small to large amounts, from ecological junior crew to senior crew, from short to long term, providing investors with a balanced diversification service.
