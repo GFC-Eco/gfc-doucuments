@@ -1,4 +1,4 @@
-# GFC documents
+# GFC documents - 
 This document is a systematic description of the GFC project.
 We are glad to present our design concept and product logic to you.
 In the GFC project, we have thought deeply about many aspects.
