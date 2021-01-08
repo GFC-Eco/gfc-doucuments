@@ -303,7 +303,7 @@ In the future, all proposals in the ecology will require the participation of us
 The only way to be considered valid is to exceed a certain percentage of the number of votes. 
 
 
-As you konw,
+As you know,
 
 **The Code is the law.**
 
