@@ -212,7 +212,7 @@ For example, when a user is very active in ecological construction (actively pos
 
 the number of GFCs purchased and held, the intensity of pledging behavior, project activity participation, community activity, personal activity, etc.
 
-**Thrid. As you can see, investors in T.lending need to choose the investment period of the asset, currently we set the period to 15d, 30d, 60d, 180d.**
+**Third. As you can see, investors in T.lending need to choose the investment period of the asset, currently we set the period to 15d, 30d, 60d, 180d.**
 
 Depending on the demand and supply of different currencies in the pool, we will give the corresponding interest rate term structure through smart contracts.
 
