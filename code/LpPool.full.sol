@@ -2,7 +2,7 @@
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.6.12;
+pragma solidity ^0.6.0;
 
 
 contract Governance {
@@ -581,7 +581,7 @@ contract LpPool is Governance, IERC721Receiver {
     using SafeERC20 for IERC20;
 
     uint public startTime;
-    uint public constant duration = 52*24*60*60;
+    uint public constant duration = 14*24*60*60;
 
     IERC721 public _nft;
     IERC20 public _lp;
@@ -607,6 +607,8 @@ contract LpPool is Governance, IERC721Receiver {
     event Staked(address indexed user, uint256 amount);
     event Withdrawn(address indexed user, uint256 amount);
     event RewardNFTPaid(address indexed user, uint256 reward);
+    event SetNFTTokenId(uint256 tokenId, uint round);
+    event GetProfit(address indexed user, uint256 amount);
 
     struct GfvProfit {
         uint updateTime;
@@ -627,6 +629,10 @@ contract LpPool is Governance, IERC721Receiver {
      *
      */
     constructor(address lp, address gfv, address nft) public {
+        require(lp != address(0), "lp is a zero value");
+        require(gfv != address(0), "gfv is a zero value");
+        require(nft != address(0), "nft is a zero value");
+
         _lp = IERC20(lp);
         _gfv = IERC20(gfv);
         _nft = IERC721(nft);
@@ -664,24 +670,19 @@ contract LpPool is Governance, IERC721Receiver {
      */
     function calcGFV(address account, uint256 amount) internal view returns (uint256) {
         uint256 earnGFV = 0;
-        if (amount > 0 && now > _gfvProfit[account].updateTime) {
-            uint profitTime;
-            if (startTime.add(duration) > now) {
-                profitTime = now.sub(_gfvProfit[account].updateTime);
-            } else {
-                profitTime = startTime.add(duration).sub(_gfvProfit[account].updateTime);
-            }
-            earnGFV = amount.mul(profitTime).mul(20).div(100).div(duration);
+        if (amount > 0) {
+            uint profitTime = getActiveTime().sub(_gfvProfit[account].updateTime);
+            earnGFV = amount.mul(profitTime).mul(35).div(1000).div(duration);
         }
         return _gfvProfit[account].pastEarn.add(earnGFV);
     }
 
     function updateGFVProfit(address account, uint256 amount) internal {
-        if (_gfvProfit[msg.sender].updateTime == 0) {
-            _gfvProfit[msg.sender].updateTime = now;
+        if (_gfvProfit[account].updateTime == 0) {
+            _gfvProfit[account].updateTime = getActiveTime();
         }
         uint256 earnGFV = calcGFV(account, amount);
-        _gfvProfit[account].updateTime = now;
+        _gfvProfit[account].updateTime = getActiveTime();
         _gfvProfit[account].pastEarn = earnGFV;
     }
 
@@ -691,9 +692,19 @@ contract LpPool is Governance, IERC721Receiver {
     }
 
     function getGFVProfit() public {
+        uint256 amount = _gfvProfit[msg.sender].pastEarn;
         updateGFVProfit(msg.sender, _lpBalances[msg.sender]);
-        _gfv.mint(msg.sender, _gfvProfit[msg.sender].pastEarn);
+        _gfv.mint(msg.sender, amount);
         _gfvProfit[msg.sender].pastEarn = 0;
+        GetProfit(msg.sender, amount);
+    }
+
+    function getActiveTime() internal view returns(uint) {
+        if (startTime.add(duration) > now) {
+            return now;
+        } else {
+            return startTime.add(duration);
+        }
     }
 
     /**
@@ -707,12 +718,8 @@ contract LpPool is Governance, IERC721Receiver {
         _round = _round.add(1);
         _roundTokenId[_round] = nftTokenId;
         _isAward = false;
+        SetNFTTokenId(nftTokenId, _round);
     }
-//    function reSetNFTTokenId(uint256 nftTokenId) external onlyGovernance {
-//        _nft.safeTransferFrom(address(this), msg.sender, _roundTokenId[_round]);
-//        _nft.safeTransferFrom(msg.sender, address(this), nftTokenId);
-//        _roundTokenId[_round] = nftTokenId;
-//    }
 
     /**
      *
@@ -723,18 +730,19 @@ contract LpPool is Governance, IERC721Receiver {
         require(amount > 0, "Cannot stake 0");
 
         uint256 currentProb = 0;
+        uint currentTime = getActiveTime();
 
         if(_accountProb[msg.sender].time <= 0) {
             _accounts.push(msg.sender);
         } else {
             if (_lpBalances[msg.sender] > 0) {
-                uint stakeTime = now.sub(_accountProb[msg.sender].time);
+                uint stakeTime = currentTime.sub(_accountProb[msg.sender].time);
                 currentProb = _accountProb[msg.sender].prob.add(_lpBalances[msg.sender].mul(stakeTime));
             }
         }
 
         _accountProb[msg.sender].prob = currentProb;
-        _accountProb[msg.sender].time = now;
+        _accountProb[msg.sender].time = currentTime;
         stake(amount);
         updateGFVProfit(msg.sender, _gfvProfit[msg.sender].pledgeNum);
         _gfvProfit[msg.sender].pledgeNum = _lpBalances[msg.sender];
@@ -750,9 +758,11 @@ contract LpPool is Governance, IERC721Receiver {
     function redeemLp(uint256 amount) external {
         require(amount > 0, "Cannot withdraw 0");
 
-        uint stakeTime = now.sub(_accountProb[msg.sender].time);
+        uint currentTime = getActiveTime();
+
+        uint stakeTime = currentTime.sub(_accountProb[msg.sender].time);
         _accountProb[msg.sender].prob = _accountProb[msg.sender].prob.add(_lpBalances[msg.sender].mul(stakeTime));
-        _accountProb[msg.sender].time = now;
+        _accountProb[msg.sender].time = currentTime;
         withdraw(amount);
         updateGFVProfit(msg.sender, _gfvProfit[msg.sender].pledgeNum);
         _gfvProfit[msg.sender].pledgeNum = _lpBalances[msg.sender];
@@ -767,7 +777,7 @@ contract LpPool is Governance, IERC721Receiver {
      */
     function award() external onlyGovernance returns (address) {
         uint256 mark = 0;
-        uint currentTime = now;
+        uint currentTime = getActiveTime();
         address addr;
         for(uint256 i = 0; i < _accounts.length; i++){
             addr = _accounts[i];
@@ -778,12 +788,16 @@ contract LpPool is Governance, IERC721Receiver {
                 _accountProb[addr].probStart = mark;
                 mark = mark.add(_accountProb[addr].prob);
                 _accountProb[addr].probEnd = mark;
+            } else {
+                _accountProb[addr].probStart = 0;
+                _accountProb[addr].probEnd = 0;
             }
             _accountProb[addr].prob = 0;
         }
         uint256 randomValue = random(mark);
         address awardAccount;
         for(uint256 i = 0; i < _accounts.length; i++){
+            addr = _accounts[i];
             if(randomValue >= _accountProb[addr].probStart && randomValue < _accountProb[addr].probEnd) {
                 awardAccount = _accounts[i];
                 break;
@@ -797,7 +811,7 @@ contract LpPool is Governance, IERC721Receiver {
 
     function random(uint256 length) public view returns(uint256) {
         uint256 randomNum = uint256(keccak256(abi.encodePacked(block.difficulty, now)));
-        return randomNum%length;
+        return randomNum.mod(length);
     }
 
     function getRewards(uint round) external view returns (address, uint256) {
